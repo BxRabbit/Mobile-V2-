@@ -13,7 +13,7 @@
 </ion-item>
     <ion-item>
         <ion-card padding *ngFor="let poll of resultado2">
-            <div class="card-title">Pregunta: {{poll.pregunta}}</div>
+            <div class="card-title"><ion-item text-wrap>Pregunta: {{poll.pregunta}}</ion-item></div>
             <div class="card-subtitle">Respuesta: {{poll.respuesta}}</div>
             <div class="card-subtitle">Número de respuestas: {{poll.resultados}}</div>
         </ion-card>

@@ -6,7 +6,7 @@
         <ion-list>
             <ion-item *ngFor="let item of list">
                     <h3>{{ item.tipo }}</h3>
-                    <h1>{{ item.pregunta }}</h1>
+                    <ion-item text-wrap>{{ item.pregunta }}</ion-item>
             </ion-item>
         </ion-list>
     </ion-card>
