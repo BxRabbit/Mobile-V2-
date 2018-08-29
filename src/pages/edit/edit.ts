@@ -1,6 +1,6 @@
 import 'rxjs/Rx';
 import { Component, IonicPage, NavController, NavParams, ToastController, Http, Response,
-  AuthSevice, CreateAskPage } from '../index.paginas';
+  AuthSevice } from '../index.paginas';
 
 @IonicPage()
 @Component({

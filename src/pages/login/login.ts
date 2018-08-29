@@ -1,6 +1,6 @@
 import 'rxjs/Rx';
-import { Component, IonicPage, NavController, LoadingController, ToastController, Http, PrincipalPage,
-  AuthSevice, SignupPage } from '../index.paginas';
+import { Component, NavController, LoadingController, ToastController, Http, PrincipalPage,
+  AuthSevice } from '../index.paginas';
 
 
 @Component({
@@ -31,10 +31,6 @@ export class LoginPage {
   }
   takeMeBack() {
     this.navCtrl.parent.select(0);
-  }
-
-  crearCuenta(){
-    this.navCtrl.push(SignupPage);
   }
 
   login(){

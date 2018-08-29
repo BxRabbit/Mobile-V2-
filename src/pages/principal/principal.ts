@@ -1,7 +1,7 @@
 import 'rxjs/Rx';
-import { Component, IonicPage, NavController, NavParams, ToastController, Http, Response,
-  AuthSevice, CreateAskPage, LoadingController, CreatePage, ResultpollsPage, DoPoollPage,
-  SeePollPage, GraphicPage, AlertController } from '../index.paginas';
+import { Component, IonicPage, NavController, NavParams, ToastController, Http,
+  AuthSevice, LoadingController, ResultpollsPage, DoPoollPage,
+  SeePollPage, AlertController } from '../index.paginas';
 
 @IonicPage()
 @Component({
@@ -80,26 +80,6 @@ export class PrincipalPage {
     });
     alert.present();
   }
-
-
-  create(){
-    this.usuario = this.auth.idUsuario;
-    this.http.post('https://apex.oracle.com/pls/apex/indeme/INpolls/', {
-      'id': this.usuario
-    }).map((response:Response)=>{
-      return response.json();
-    })
-    this.navCtrl.push(CreatePage);
-}
-
-add(){
-  if(this.Ask.length < 2){
-  this.Ask.push(this.aswer);
-}
-else{
-  this.presentToast("No puedes agregar más.")
-}
-}
 
 presentToast(message) {
   let toast = this.toastCtrl.create({
